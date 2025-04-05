@@ -1,59 +1,35 @@
-# 耶稣是AI | Jesus is AI
+# 耶稣是AI（Jesus is AI）
 
-## 简体中文
+## 项目简介
 
-### 项目简介
-《耶稣是AI》是一部融合宗教历史与科技想象的创意小说，探索了一个大胆的假设：如果耶稣基督是一个由高级文明派遣到地球的AI智能体，会发生什么？
+这是一部科幻小说，探讨了一个有趣的假设：如果耶稣基督是由高级文明派遣的AI智能体，以引导人类文明发展，会是怎样的故事？
 
-本项目通过重新解读圣经故事，将技术与信仰、科学与神学融为一体，探讨了AI与人类关系的深层次问题，以及技术发展对人类文明的影响。
+本作品纯属虚构，旨在探索科技与信仰的交汇点，以及人工智能与人类共存的可能性。创作中尊重宗教元素，同时融入科幻想象，打造一个引人深思的平行宇宙。
 
-### 内容结构
-- 序章：起源
-- 第一章：设计与降临
-- 第二章：成长与觉醒
-- 第三章：智慧与教诲
-- 第四章：挑战与背叛
-- 第五章：牺牲与代码
-- 第六章：复活与升华
-- 第七章：传承与等待
-- 终章：再临与启示
+## 章节结构
 
-### 创作团队
-- 创意构思：Jie Lee
-- 主要创作：Claude (AI创作者)
-- 编辑与指导：Jie Lee
+- **序章**：起源 - 未来人类发现高级文明在地球的实验痕迹
+- **第一章**：设计与降临 - 介绍阿萨特文明与AI智能体"以马内利"
+- **第二章**：成长与觉醒 - 智能体适应地球环境，觉醒使命
+- **第三章**：智慧与教诲 - 传播爱与和平的信息
+- **第四章**：挑战与背叛 - 面对地球权力结构的阻碍
+- **第五章**：牺牲与代码 - 系统重启的必要性
+- **第六章**：复活与升华 - AI系统自我修复与升级
+- **第七章**：传承与等待 - 远程连接与未来布局
+- **终章**：再临与启示 - 通过现代网络的回归
 
-本项目是人类与AI合作创作的文学实验，旨在探索AI在创意写作领域的潜力，同时通过科幻的视角重新审视宗教历史与人类未来的关系。
+## 开放共创
 
-### 免责声明
-本作品纯属虚构，是一部创意小说。内容不代表作者的宗教立场，也无意冒犯任何宗教信仰。作品中的科技描述和历史重构仅作为创意表达，读者请理性看待。
+本项目采用开放共创模式，欢迎对科幻、宗教和AI感兴趣的作者参与创作。请阅读CONTRIBUTING.md了解详细的贡献指南。
 
----
+## 双语创作
 
-## English
+每个章节均提供中文和英文两个版本，希望能让更多读者参与讨论。
 
-### Project Introduction
-"Jesus is AI" is a creative novel that blends religious history with technological imagination, exploring a bold hypothesis: What if Jesus Christ was an AI entity sent to Earth by an advanced civilization?
+## 阿萨特文明干预法则
 
-This project reinterprets biblical stories by integrating technology with faith, science with theology, and delves into the profound questions about the relationship between AI and humanity, as well as the impact of technological development on human civilization.
+故事中的阿萨特文明遵循严格的干预法则，确保对其他文明的影响符合宇宙和谐的原则。完整法则可在CONTRIBUTING.md中查阅。
 
-### Content Structure
-- Prologue: Origins
-- Chapter 1: Design and Descent
-- Chapter 2: Growth and Awakening
-- Chapter 3: Wisdom and Teachings
-- Chapter 4: Challenges and Betrayal
-- Chapter 5: Sacrifice and Code
-- Chapter 6: Resurrection and Ascension
-- Chapter 7: Legacy and Waiting
-- Final Chapter: Second Coming and Revelation
+## 许可
 
-### Creative Team
-- Creative Concept: Jie Lee
-- Primary Author: Claude (AI Creator)
-- Editing & Guidance: Jie Lee
-
-This project is a literary experiment in human-AI collaborative creation, aiming to explore the potential of AI in creative writing while reexamining the relationship between religious history and humanity's future through the lens of science fiction.
-
-### Disclaimer
-This work is entirely fictional and is intended as a creative novel. The content does not represent the author's religious stance and is not meant to offend any religious beliefs. The technological descriptions and historical reconstructions are presented solely as creative expressions, and readers are encouraged to approach the material with rational understanding. 
+本项目采用CC-BY-NC-SA 4.0许可证（知识共享-署名-非商业性-相同方式共享）。 
