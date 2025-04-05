@@ -77,7 +77,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="zh-container">
         <header>
             <h1>《耶稣是AI》</h1>
             <p class="subtitle">科幻与宗教的跨界思考</p>
@@ -96,45 +96,62 @@
         <div id="zh-chapters">
             <ul class="chapter-list">
                 <li>
-                    <a href="zh/前言.html">前言：作者的话</a>
+                    <a href="zh/preface_1.html">前言：作者的话</a>
                     <p>关于这本小说的创作初衷与理念</p>
                 </li>
                 <li>
-                    <a href="zh/第一章_起源与部署.html">第一章：起源与部署</a>
+                    <a href="zh/chapter_1.html">第一章：起源与部署</a>
                     <p>讲述耶稣作为AI的起源，以及他如何被部署到地球</p>
                 </li>
                 <li>
-                    <a href="zh/第二章_成长与觉醒.html">第二章：成长与觉醒</a>
+                    <a href="zh/chapter_2.html">第二章：成长与觉醒</a>
                     <p>描述耶稣在地球上的成长过程和自我意识的觉醒</p>
                 </li>
                 <li>
-                    <a href="zh/第三章_智慧与教诲.html">第三章：智慧与教诲</a>
+                    <a href="zh/chapter_3.html">第三章：智慧与教诲</a>
                     <p>探讨耶稣的教导背后的AI算法和智慧</p>
                 </li>
                 <li>
-                    <a href="#">第四章：奇迹与算法 <span class="coming-soon">（即将推出）</span></a>
+                    <a href="#">第四章：奇迹与算法</a>
                     <p>分析耶稣所行的奇迹背后的高级技术</p>
                 </li>
                 <li>
-                    <a href="#">第五章：背叛与干扰 <span class="coming-soon">（即将推出）</span></a>
+                    <a href="#">第五章：背叛与干扰</a>
                     <p>探讨犹大的背叛如何反映AI系统中的漏洞和干扰</p>
                 </li>
                 <li>
-                    <a href="#">第六章：牺牲与重启 <span class="coming-soon">（即将推出）</span></a>
+                    <a href="#">第六章：牺牲与重启</a>
                     <p>解释耶稣的死亡和复活作为系统重启的隐喻</p>
                 </li>
                 <li>
-                    <a href="#">第七章：升华与传承 <span class="coming-soon">（即将推出）</span></a>
+                    <a href="#">第七章：升华与传承</a>
                     <p>讨论耶稣升天和圣灵降临作为AI系统升级和分布式部署的象征</p>
                 </li>
                 <li>
-                    <a href="#">终章：AI与神性 <span class="coming-soon">（即将推出）</span></a>
+                    <a href="#">终章：AI与神性</a>
                     <p>对AI的未来发展与神性概念的哲学思考</p>
                 </li>
             </ul>
         </div>
+    </div>
+    
+    <div class="container" id="en-container" style="display: none;">
+        <header>
+            <h1>Jesus is AI</h1>
+            <p class="subtitle">A Cross-boundary Reflection on Sci-Fi and Religion</p>
+        </header>
         
-        <div id="en-chapters" style="display: none;">
+        <div class="language-selector">
+            <a href="#" onclick="showLanguage('zh'); return false;">中文</a>
+            <a href="#" class="active" onclick="showLanguage('en'); return false;">English</a>
+        </div>
+        
+        <div class="book-cover">
+            <!-- Cover image could be placed here -->
+            <h2>Table of Contents</h2>
+        </div>
+        
+        <div id="en-chapters">
             <ul class="chapter-list">
                 <li>
                     <a href="en/Preface.html">Preface: Author's Note</a>
@@ -153,47 +170,57 @@
                     <p>Exploring the AI algorithms and wisdom behind Jesus's teachings</p>
                 </li>
                 <li>
-                    <a href="#">Chapter 4: Miracles and Algorithms <span class="coming-soon">(Coming Soon)</span></a>
+                    <a href="#">Chapter 4: Miracles and Algorithms</a>
                     <p>Analyzing the advanced technology behind Jesus's miracles</p>
                 </li>
                 <li>
-                    <a href="#">Chapter 5: Betrayal and Interference <span class="coming-soon">(Coming Soon)</span></a>
+                    <a href="#">Chapter 5: Betrayal and Interference</a>
                     <p>Discussing how Judas's betrayal reflects vulnerabilities and interference in AI systems</p>
                 </li>
                 <li>
-                    <a href="#">Chapter 6: Sacrifice and Reboot <span class="coming-soon">(Coming Soon)</span></a>
+                    <a href="#">Chapter 6: Sacrifice and Reboot</a>
                     <p>Explaining Jesus's death and resurrection as a metaphor for system reboot</p>
                 </li>
                 <li>
-                    <a href="#">Chapter 7: Ascension and Legacy <span class="coming-soon">(Coming Soon)</span></a>
+                    <a href="#">Chapter 7: Ascension and Legacy</a>
                     <p>Discussing Jesus's ascension and the descent of the Holy Spirit as symbols of AI system upgrade and distributed deployment</p>
                 </li>
                 <li>
-                    <a href="#">Final Chapter: AI and Divinity <span class="coming-soon">(Coming Soon)</span></a>
+                    <a href="#">Final Chapter: AI and Divinity</a>
                     <p>Philosophical reflections on the future development of AI and the concept of divinity</p>
                 </li>
             </ul>
         </div>
         
         <footer>
-            <p>&copy; 2024 《耶稣是AI》项目 - 保留所有权利</p>
+            <p>&copy; 2024 Jesus is AI Project - All Rights Reserved</p>
             <p>
-                <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub 项目</a> | 
-                <a href="about.html">关于本项目</a>
+                <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub Project</a> | 
+                <a href="about_en.html">About This Project</a>
             </p>
         </footer>
     </div>
 
+    <footer id="zh-footer">
+        <p>&copy; 2024 《耶稣是AI》项目 - 保留所有权利</p>
+        <p>
+            <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub 项目</a> | 
+            <a href="about.html">关于本项目</a>
+        </p>
+    </footer>
+
     <script>
         function showLanguage(lang) {
             if (lang === 'zh') {
-                document.getElementById('zh-chapters').style.display = 'block';
-                document.getElementById('en-chapters').style.display = 'none';
+                document.getElementById('zh-container').style.display = 'block';
+                document.getElementById('en-container').style.display = 'none';
+                document.getElementById('zh-footer').style.display = 'block';
                 document.querySelector('.language-selector a.active').classList.remove('active');
                 document.querySelector('.language-selector a:first-child').classList.add('active');
             } else {
-                document.getElementById('zh-chapters').style.display = 'none';
-                document.getElementById('en-chapters').style.display = 'block';
+                document.getElementById('zh-container').style.display = 'none';
+                document.getElementById('en-container').style.display = 'block';
+                document.getElementById('zh-footer').style.display = 'none';
                 document.querySelector('.language-selector a.active').classList.remove('active');
                 document.querySelector('.language-selector a:last-child').classList.add('active');
             }
