@@ -124,27 +124,7 @@ function processFile(file, sourcePath, destPath, allFiles, index, template, lang
     // 将Markdown转换为HTML
     const bodyContent = md.render(markdownContent);
     
-    // 确定前一章和下一章的链接 - 需要编码中文文件名
-    const prevChapter = index > 0 ? 
-        encodeURIComponent(allFiles[index - 1].replace(/\.md$/, '.html')) : 
-        "PREV_CHAPTER";
-    
-    const nextChapter = index < allFiles.length - 1 ? 
-        encodeURIComponent(allFiles[index + 1].replace(/\.md$/, '.html')) : 
-        "NEXT_CHAPTER";
-    
-    // 替换模板中的占位符
-    let htmlOutput = template
-        .replace(/CONTENT_TITLE/g, title)
-        .replace(/CONTENT_BODY/g, bodyContent)
-        .replace(/PREV_CHAPTER/g, prevChapter)
-        .replace(/NEXT_CHAPTER/g, nextChapter);
-    
-    // 调整相对路径链接
-    // 对于CSS链接，我们需要移动到上一层目录
-    htmlOutput = htmlOutput.replace(/href="\.\.\/style.css"/g, 'href="../style.css"');
-    
-    // 保存HTML文件 - 使用英文命名或编码后的文件名
+    // 生成HTML文件名
     let outputFileName;
     
     // 中文文件处理方式
@@ -173,6 +153,74 @@ function processFile(file, sourcePath, destPath, allFiles, index, template, lang
         outputFileName = fileName.replace(/\.md$/, '.html');
     }
     
+    // 确定前一章和下一章的文件名
+    let prevFileName, nextFileName;
+    
+    if (index > 0) {
+        const prevFile = allFiles[index - 1];
+        // 使用相同的逻辑为前一个文件生成文件名
+        if (language === 'zh' && /[\u4e00-\u9fa5]/.test(prevFile)) {
+            const chapterMatch = prevFile.match(/第(.*?)章/);
+            let chapterNum = index;
+            if (chapterMatch) {
+                const chineseNum = chapterMatch[1];
+                const numMap = {'一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9};
+                if (numMap[chineseNum]) {
+                    chapterNum = numMap[chineseNum];
+                }
+            }
+            
+            let chapterType = 'chapter';
+            if (prevFile.includes('前言')) chapterType = 'preface';
+            else if (prevFile.includes('序章')) chapterType = 'prologue';
+            else if (prevFile.includes('终章')) chapterType = 'epilogue';
+            
+            prevFileName = `${chapterType}_${chapterNum}.html`;
+        } else {
+            prevFileName = prevFile.replace(/\.md$/, '.html');
+        }
+    } else {
+        prevFileName = "PREV_CHAPTER";
+    }
+    
+    if (index < allFiles.length - 1) {
+        const nextFile = allFiles[index + 1];
+        // 使用相同的逻辑为下一个文件生成文件名
+        if (language === 'zh' && /[\u4e00-\u9fa5]/.test(nextFile)) {
+            const chapterMatch = nextFile.match(/第(.*?)章/);
+            let chapterNum = index + 2;
+            if (chapterMatch) {
+                const chineseNum = chapterMatch[1];
+                const numMap = {'一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9};
+                if (numMap[chineseNum]) {
+                    chapterNum = numMap[chineseNum];
+                }
+            }
+            
+            let chapterType = 'chapter';
+            if (nextFile.includes('前言')) chapterType = 'preface';
+            else if (nextFile.includes('序章')) chapterType = 'prologue';
+            else if (nextFile.includes('终章')) chapterType = 'epilogue';
+            
+            nextFileName = `${chapterType}_${chapterNum}.html`;
+        } else {
+            nextFileName = nextFile.replace(/\.md$/, '.html');
+        }
+    } else {
+        nextFileName = "NEXT_CHAPTER";
+    }
+    
+    // 替换模板中的占位符
+    let htmlOutput = template
+        .replace(/CONTENT_TITLE/g, title)
+        .replace(/CONTENT_BODY/g, bodyContent)
+        .replace(/PREV_CHAPTER/g, prevFileName)
+        .replace(/NEXT_CHAPTER/g, nextFileName);
+    
+    // 调整相对路径链接
+    // 对于CSS链接，我们需要移动到上一层目录
+    htmlOutput = htmlOutput.replace(/href="\.\.\/style.css"/g, 'href="../style.css"');
+    
     const outputFile = path.join(destPath, outputFileName);
     fs.writeFileSync(outputFile, htmlOutput, 'utf8');
     
@@ -189,11 +237,11 @@ function processFile(file, sourcePath, destPath, allFiles, index, template, lang
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=${encodeURIComponent(outputFileName)}">
+    <meta http-equiv="refresh" content="0;url=${outputFileName}">
     <title>重定向到 ${title}</title>
 </head>
 <body>
-    <p>如果您没有被自动重定向，请<a href="${encodeURIComponent(outputFileName)}">点击这里</a>。</p>
+    <p>如果您没有被自动重定向，请<a href="${outputFileName}">点击这里</a>。</p>
 </body>
 </html>`;
         
