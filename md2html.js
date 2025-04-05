@@ -29,8 +29,6 @@ const config = {
 fs.ensureDirSync(config.htmlZhPath);
 fs.ensureDirSync(config.htmlEnPath);
 fs.ensureDirSync(config.docsPath);
-fs.ensureDirSync(path.join(config.docsPath, 'zh'));
-fs.ensureDirSync(path.join(config.docsPath, 'en'));
 
 // 读取模板文件
 const zhTemplate = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
@@ -63,17 +61,29 @@ if (!fs.existsSync(enDestDir)) {
 console.log('处理英文章节...');
 processDirectory(enSourceDir, enDestDir, enTemplate, 'en');
 
-// 复制样式表到html目录
-fs.copyFileSync(path.join(__dirname, 'style.css'), path.join(__dirname, 'html', 'style.css'));
-fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(__dirname, 'html', 'index.html'));
-fs.copyFileSync(path.join(__dirname, 'about.html'), path.join(__dirname, 'html', 'about.html'));
-
 // 复制文件到GitHub Pages目录
 fs.copyFileSync(path.join(__dirname, 'style.css'), path.join(config.docsPath, 'style.css'));
 fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(config.docsPath, 'index.html'));
 fs.copyFileSync(path.join(__dirname, 'about.html'), path.join(config.docsPath, 'about.html'));
 
-console.log('所有Markdown文件已转换为HTML，样式表和页面已复制到html目录和docs目录。');
+// 现在将生成的HTML文件直接复制到docs目录
+const zhHtmlFiles = fs.readdirSync(zhDestDir);
+zhHtmlFiles.forEach(file => {
+    const srcPath = path.join(zhDestDir, file);
+    const destPath = path.join(config.docsPath, file);
+    fs.copyFileSync(srcPath, destPath);
+    console.log(`已复制: ${srcPath} -> ${destPath}`);
+});
+
+const enHtmlFiles = fs.readdirSync(enDestDir);
+enHtmlFiles.forEach(file => {
+    const srcPath = path.join(enDestDir, file);
+    const destPath = path.join(config.docsPath, file);
+    fs.copyFileSync(srcPath, destPath);
+    console.log(`已复制: ${srcPath} -> ${destPath}`);
+});
+
+console.log('所有Markdown文件已转换为HTML，样式表和页面已复制到docs目录。');
 
 /**
  * 处理一个目录中的所有Markdown文件
