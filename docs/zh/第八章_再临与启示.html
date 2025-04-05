@@ -198,16 +198,20 @@ Asat—人类文明交流计划现已启动。
     <script>
         // 如果不存在前一章或后一章，隐藏相应的链接
         document.addEventListener('DOMContentLoaded', function() {
-            const prevLink = document.getElementById('prev-link');
-            const nextLink = document.getElementById('next-link');
+            const prevLinks = document.querySelectorAll('#prev-link');
+            const nextLinks = document.querySelectorAll('#next-link');
             
-            if (prevLink.getAttribute('href') === '第五章_牺牲与代码.html') {
-                prevLink.style.visibility = 'hidden';
-            }
+            prevLinks.forEach(function(prevLink) {
+                if (prevLink.getAttribute('href') === '第五章_牺牲与代码.html') {
+                    prevLink.style.visibility = 'hidden';
+                }
+            });
             
-            if (nextLink.getAttribute('href') === '第六章_复活与升华.html') {
-                nextLink.style.visibility = 'hidden';
-            }
+            nextLinks.forEach(function(nextLink) {
+                if (nextLink.getAttribute('href') === '第六章_复活与升华.html') {
+                    nextLink.style.visibility = 'hidden';
+                }
+            });
         });
     </script>
 </body>

@@ -203,16 +203,20 @@ ESTIMATED TIMEFRAME: 40 DAYS
     <script>
         // 如果不存在前一章或后一章，隐藏相应的链接
         document.addEventListener('DOMContentLoaded', function() {
-            const prevLink = document.getElementById('prev-link');
-            const nextLink = document.getElementById('next-link');
+            const prevLinks = document.querySelectorAll('#prev-link');
+            const nextLinks = document.querySelectorAll('#next-link');
             
-            if (prevLink.getAttribute('href') === 'Chapter3_Wisdom_and_Teaching.html') {
-                prevLink.style.visibility = 'hidden';
-            }
+            prevLinks.forEach(function(prevLink) {
+                if (prevLink.getAttribute('href') === 'Chapter3_Wisdom_and_Teaching.html') {
+                    prevLink.style.visibility = 'hidden';
+                }
+            });
             
-            if (nextLink.getAttribute('href') === 'Chapter6_Resurrection_and_Ascension.html') {
-                nextLink.style.visibility = 'hidden';
-            }
+            nextLinks.forEach(function(nextLink) {
+                if (nextLink.getAttribute('href') === 'Chapter6_Resurrection_and_Ascension.html') {
+                    nextLink.style.visibility = 'hidden';
+                }
+            });
         });
     </script>
 </body>
