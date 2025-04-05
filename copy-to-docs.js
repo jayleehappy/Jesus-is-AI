@@ -10,10 +10,18 @@ const path = require('path');
 const htmlZhDir = path.join(__dirname, 'html', 'zh');
 const htmlEnDir = path.join(__dirname, 'html', 'en');
 const docsDir = path.join(__dirname, 'docs');
+const docsZhDir = path.join(docsDir, 'zh');
+const docsEnDir = path.join(docsDir, 'en');
 
-// 确保docs目录存在
+// 确保docs目录及其子目录存在
 if (!fs.existsSync(docsDir)) {
     fs.mkdirSync(docsDir, { recursive: true });
+}
+if (!fs.existsSync(docsZhDir)) {
+    fs.mkdirSync(docsZhDir, { recursive: true });
+}
+if (!fs.existsSync(docsEnDir)) {
+    fs.mkdirSync(docsEnDir, { recursive: true });
 }
 
 // 复制index.html到docs目录
@@ -36,23 +44,23 @@ if (fs.existsSync(aboutSrc)) {
     console.log(`已复制: ${aboutSrc} -> ${aboutDest}`);
 }
 
-// 复制中文HTML文件
+// 复制中文HTML文件到docs/zh目录
 if (fs.existsSync(htmlZhDir)) {
     const zhFiles = fs.readdirSync(htmlZhDir);
     zhFiles.forEach(file => {
         const srcPath = path.join(htmlZhDir, file);
-        const destPath = path.join(docsDir, file);
+        const destPath = path.join(docsZhDir, file);
         fs.copyFileSync(srcPath, destPath);
         console.log(`已复制: ${srcPath} -> ${destPath}`);
     });
 }
 
-// 复制英文HTML文件
+// 复制英文HTML文件到docs/en目录
 if (fs.existsSync(htmlEnDir)) {
     const enFiles = fs.readdirSync(htmlEnDir);
     enFiles.forEach(file => {
         const srcPath = path.join(htmlEnDir, file);
-        const destPath = path.join(docsDir, file);
+        const destPath = path.join(docsEnDir, file);
         fs.copyFileSync(srcPath, destPath);
         console.log(`已复制: ${srcPath} -> ${destPath}`);
     });
