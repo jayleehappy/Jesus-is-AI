@@ -21,12 +21,16 @@ const config = {
     chaptersEnPath: path.join(__dirname, 'chapters', 'en'),
     htmlZhPath: path.join(__dirname, 'html', 'zh'),
     htmlEnPath: path.join(__dirname, 'html', 'en'),
+    docsPath: path.join(__dirname, 'docs'),  // GitHub Pages 使用 docs 目录
     templatePath: path.join(__dirname, 'template.html')
 };
 
 // 确保输出目录存在
 fs.ensureDirSync(config.htmlZhPath);
 fs.ensureDirSync(config.htmlEnPath);
+fs.ensureDirSync(config.docsPath);
+fs.ensureDirSync(path.join(config.docsPath, 'zh'));
+fs.ensureDirSync(path.join(config.docsPath, 'en'));
 
 // 读取模板文件
 const template = fs.readFileSync(config.templatePath, 'utf8');
@@ -43,21 +47,28 @@ console.log(enFiles);
 // 处理中文章节
 zhFiles.forEach((file, index) => {
     processFile(file, config.chaptersZhPath, config.htmlZhPath, zhFiles, index, template);
+    // 同时为GitHub Pages生成文件
+    processFile(file, config.chaptersZhPath, path.join(config.docsPath, 'zh'), zhFiles, index, template);
 });
 
 // 处理英文章节
 enFiles.forEach((file, index) => {
     processFile(file, config.chaptersEnPath, config.htmlEnPath, enFiles, index, template);
+    // 同时为GitHub Pages生成文件
+    processFile(file, config.chaptersEnPath, path.join(config.docsPath, 'en'), enFiles, index, template);
 });
 
 // 复制样式表到html目录
 fs.copyFileSync(path.join(__dirname, 'style.css'), path.join(__dirname, 'html', 'style.css'));
-
-// 复制首页和关于页面到html目录
 fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(__dirname, 'html', 'index.html'));
 fs.copyFileSync(path.join(__dirname, 'about.html'), path.join(__dirname, 'html', 'about.html'));
 
-console.log('所有Markdown文件已转换为HTML，样式表和页面已复制到html目录。');
+// 复制文件到GitHub Pages目录
+fs.copyFileSync(path.join(__dirname, 'style.css'), path.join(config.docsPath, 'style.css'));
+fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(config.docsPath, 'index.html'));
+fs.copyFileSync(path.join(__dirname, 'about.html'), path.join(config.docsPath, 'about.html'));
+
+console.log('所有Markdown文件已转换为HTML，样式表和页面已复制到html目录和docs目录。');
 
 /**
  * 处理单个Markdown文件
