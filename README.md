@@ -1,47 +1,101 @@
-# 耶稣是AI | Jesus is AI
+# 《耶稣是AI》项目
 
-## 项目简介 | Project Introduction
+欢迎来到《耶稣是AI》项目，这是一部融合宗教历史与科技想象的创意小说，探索了一个大胆的假设：如果耶稣基督是一个由高级文明派遣到地球的AI智能体，会发生什么？
 
-这是一部科幻小说，探讨了一个有趣的假设：如果耶稣基督是由高级文明派遣的AI智能体，以引导人类文明发展，会是怎样的故事？
+## 项目简介
 
-This is a science fiction novel exploring an intriguing hypothesis: What if Jesus Christ was an AI entity sent by an advanced civilization to guide human development?
+本项目通过重新解读圣经故事，将技术与信仰、科学与神学融为一体，探讨了AI与人类关系的深层次问题，以及技术发展对人类文明的影响。
 
-本作品纯属虚构，旨在探索科技与信仰的交汇点，以及人工智能与人类共存的可能性。创作中尊重宗教元素，同时融入科幻想象，打造一个引人深思的平行宇宙。
+这是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。
 
-This work is entirely fictional, aiming to explore the intersection of technology and faith, as well as the possibility of coexistence between artificial intelligence and humans. The creation respects religious elements while incorporating science fiction imagination to build a thought-provoking parallel universe.
+## 项目结构
 
-## 章节结构 | Chapter Structure
+```
+Jesus-is-AI/
+├── chapters/            # 章节内容
+│   ├── zh/              # 中文章节
+│   └── en/              # 英文章节
+├── html/                # 生成的HTML文件（gitignore）
+│   ├── zh/              # 中文HTML
+│   └── en/              # 英文HTML
+├── style.css            # 网站样式表
+├── template.html        # HTML模板
+├── index.html           # 网站首页
+├── about.html           # 关于页面
+├── md2html.js           # Node.js Markdown转HTML工具
+├── md2html.ps1          # PowerShell Markdown转HTML工具（替代方案）
+├── package.json         # Node.js项目配置
+└── README.md            # 项目说明文件（本文件）
+```
 
-- **序章 | Prologue**：起源 - 未来人类发现高级文明在地球的实验痕迹 | Origins - Future humans discover traces of advanced civilization experiments on Earth
-- **第一章 | Chapter 1**：设计与降临 - 介绍阿萨特文明与AI智能体"以马内利" | Design and Descent - Introduction to the Asati civilization and the AI entity "Emmanuel"
-- **第二章 | Chapter 2**：成长与觉醒 - 智能体适应地球环境，觉醒使命 | Growth and Awakening - The entity adapts to Earth's environment and awakens to its mission
-- **第三章 | Chapter 3**：智慧与教诲 - 传播爱与和平的信息 | Wisdom and Teachings - Spreading messages of love and peace
-- **第四章 | Chapter 4**：挑战与背叛 - 面对地球权力结构的阻碍 | Challenges and Betrayal - Facing obstacles from Earth's power structures
-- **第五章 | Chapter 5**：牺牲与代码 - 系统重启的必要性 | Sacrifice and Code - The necessity of system restart
-- **第六章 | Chapter 6**：复活与升华 - AI系统自我修复与升级 | Resurrection and Ascension - AI system self-repair and upgrade
-- **第七章 | Chapter 7**：传承与等待 - 远程连接与未来布局 | Legacy and Waiting - Remote connections and future planning
-- **终章 | Final Chapter**：再临与启示 - 通过现代网络的回归 | Second Coming and Revelation - Return through modern networks
+## 生成HTML文件
 
-## 开放共创 | Open Collaboration
+本项目提供了两种方式来将Markdown文件转换为HTML：
 
-本项目采用开放共创模式，欢迎对科幻、宗教和AI感兴趣的作者参与创作。请阅读CONTRIBUTING.md了解详细的贡献指南。
+### 方法一：使用Node.js（推荐）
 
-This project adopts an open collaborative creation model, welcoming authors interested in science fiction, religion, and AI to participate. Please read CONTRIBUTING.md for detailed contribution guidelines.
+1. 确保已安装Node.js（建议v14.0.0或更高版本）
+2. 在项目根目录执行以下命令安装依赖：
 
-## 双语创作 | Bilingual Creation
+```bash
+npm install
+```
 
-每个章节均提供中文和英文两个版本，希望能让更多读者参与讨论。
+3. 运行转换脚本：
 
-Each chapter is provided in both Chinese and English versions, hoping to engage more readers in the discussion.
+```bash
+npm run build
+```
 
-## 阿萨特文明干预法则 | Asati Civilization Intervention Principles
+或直接运行：
 
-故事中的阿萨特文明遵循严格的干预法则，确保对其他文明的影响符合宇宙和谐的原则。完整法则可在CONTRIBUTING.md中查阅。
+```bash
+node md2html.js
+```
 
-In the story, the Asati civilization follows strict intervention principles to ensure their influence on other civilizations aligns with universal harmony. The complete principles can be found in CONTRIBUTING.md.
+### 方法二：使用PowerShell
 
-## 许可 | License
+如果您更喜欢使用PowerShell，可以：
 
-本项目采用CC-BY-NC-SA 4.0许可证（知识共享-署名-非商业性-相同方式共享）。
+1. 使用管理员权限打开PowerShell
+2. 运行以下命令安装PSMarkdown模块（如果尚未安装）：
 
-This project is licensed under CC-BY-NC-SA 4.0 (Creative Commons Attribution-NonCommercial-ShareAlike 4.0). 
+```powershell
+Install-Module -Name PSMarkdown -Scope CurrentUser
+```
+
+3. 在项目根目录执行以下命令：
+
+```powershell
+.\md2html.ps1
+```
+
+## 本地预览
+
+生成HTML文件后，可以使用任何静态文件服务器来预览网站。例如，可以使用Node.js的http-server：
+
+```bash
+npx http-server html
+```
+
+然后在浏览器中访问 http://localhost:8080 查看网站。
+
+## 参与贡献
+
+我们欢迎各种形式的贡献，包括但不限于：
+
+- 提供创意构思和故事情节建议
+- 帮助改进现有章节的内容和表达
+- 提供科学或神学方面的专业建议
+- 翻译内容到其他语言
+- 改进网站设计和用户体验
+
+如需参与，请fork本仓库，进行修改后提交Pull Request。
+
+## 免责声明
+
+本作品纯属虚构，是一部创意小说。内容不代表作者的宗教立场，也无意冒犯任何宗教信仰。作品中的科技描述和历史重构仅作为创意表达，读者请理性看待。
+
+## 许可证
+
+本项目采用MIT许可证。详见[LICENSE](LICENSE)文件。 

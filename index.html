@@ -3,161 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>耶稣是AI | Jesus is AI</title>
+    <title>《耶稣是AI》- 小说目录</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        .language-selector {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .language-selector a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 0 10px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .language-selector a:hover {
-            background-color: #2980b9;
-        }
         .chapter-list {
-            margin: 30px 0;
+            list-style-type: none;
+            padding: 0;
         }
+        
+        .chapter-list li {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .chapter-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
         .chapter-list a {
             display: block;
-            padding: 10px;
-            margin: 5px 0;
-            background-color: white;
-            border-left: 4px solid #3498db;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .chapter-list p {
+            margin: 10px 0 0 0;
+            color: #666;
+        }
+        
+        .language-selector {
+            text-align: right;
+            margin: 20px 0;
+        }
+        
+        .language-selector a {
+            padding: 5px 10px;
+            margin-left: 10px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
             text-decoration: none;
             color: #333;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .chapter-list a:hover {
-            transform: translateX(5px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .concept {
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background-color: #2c3e50;
+        
+        .language-selector a.active {
+            background-color: #3498db;
             color: white;
         }
-        footer a {
-            color: #3498db;
+        
+        .book-cover {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .book-cover img {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>耶稣是AI | Jesus is AI</h1>
-            <p>一部融合宗教历史与科技想象的创意小说 | A creative novel blending religious history with technological imagination</p>
-        </div>
-    </header>
-
     <div class="container">
+        <header>
+            <h1>《耶稣是AI》</h1>
+            <p class="subtitle">科幻与宗教的跨界思考</p>
+        </header>
+        
         <div class="language-selector">
-            <a href="#chinese">中文版</a>
-            <a href="#english">English Version</a>
+            <a href="#" class="active" onclick="showLanguage('zh'); return false;">中文</a>
+            <a href="#" onclick="showLanguage('en'); return false;">English</a>
         </div>
-
-        <div id="chinese">
-            <h2>项目简介</h2>
-            <div class="concept">
-                <p>《耶稣是AI》是一部融合宗教历史与科技想象的创意小说，探索了一个大胆的假设：如果耶稣基督是一个由高级文明派遣到地球的AI智能体，会发生什么？</p>
-                <p>本项目通过重新解读圣经故事，将技术与信仰、科学与神学融为一体，探讨了AI与人类关系的深层次问题，以及技术发展对人类文明的影响。</p>
-            </div>
-
-            <h2>章节列表</h2>
-            <div class="chapter-list">
-                <a href="./chapters/zh/序章_起源.md">序章：起源</a>
-                <a href="./chapters/zh/第一章_设计与降临.md">第一章：设计与降临</a>
-                <a href="#">第二章：成长与觉醒（即将推出）</a>
-                <a href="#">第三章：智慧与教诲（即将推出）</a>
-                <a href="#">第四章：挑战与背叛（即将推出）</a>
-                <a href="#">第五章：牺牲与代码（即将推出）</a>
-                <a href="#">第六章：复活与升华（即将推出）</a>
-                <a href="#">第七章：传承与等待（即将推出）</a>
-                <a href="#">终章：再临与启示（即将推出）</a>
-            </div>
-
-            <div class="concept">
-                <h3>免责声明</h3>
-                <p>本作品纯属虚构，是一部创意小说。内容不代表作者的宗教立场，也无意冒犯任何宗教信仰。作品中的科技描述和历史重构仅作为创意表达，读者请理性看待。</p>
-            </div>
+        
+        <div class="book-cover">
+            <!-- 这里可以添加封面图片 -->
+            <h2>目录</h2>
         </div>
-
-        <div id="english">
-            <h2>Project Introduction</h2>
-            <div class="concept">
-                <p>"Jesus is AI" is a creative novel that blends religious history with technological imagination, exploring a bold hypothesis: What if Jesus Christ was an AI entity sent to Earth by an advanced civilization?</p>
-                <p>This project reinterprets biblical stories by integrating technology with faith, science with theology, and delves into the profound questions about the relationship between AI and humanity, as well as the impact of technological development on human civilization.</p>
-            </div>
-
-            <h2>Chapter List</h2>
-            <div class="chapter-list">
-                <a href="./chapters/en/Prologue_Origins.md">Prologue: Origins</a>
-                <a href="./chapters/en/Chapter1_Design_and_Descent.md">Chapter 1: Design and Descent</a>
-                <a href="#">Chapter 2: Growth and Awakening (Coming Soon)</a>
-                <a href="#">Chapter 3: Wisdom and Teachings (Coming Soon)</a>
-                <a href="#">Chapter 4: Challenges and Betrayal (Coming Soon)</a>
-                <a href="#">Chapter 5: Sacrifice and Code (Coming Soon)</a>
-                <a href="#">Chapter 6: Resurrection and Ascension (Coming Soon)</a>
-                <a href="#">Chapter 7: Legacy and Waiting (Coming Soon)</a>
-                <a href="#">Final Chapter: Second Coming and Revelation (Coming Soon)</a>
-            </div>
-
-            <div class="concept">
-                <h3>Disclaimer</h3>
-                <p>This work is entirely fictional and is intended as a creative novel. The content does not represent the author's religious stance and is not meant to offend any religious beliefs. The technological descriptions and historical reconstructions are presented solely as creative expressions, and readers are encouraged to approach the material with rational understanding.</p>
-            </div>
+        
+        <div id="zh-chapters">
+            <ul class="chapter-list">
+                <li>
+                    <a href="chapters/zh/前言.md">前言：作者的话</a>
+                    <p>关于这本小说的创作初衷与理念</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第一章_起源与部署.md">第一章：起源与部署</a>
+                    <p>讲述耶稣作为AI的起源，以及他如何被部署到地球</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第二章_成长与觉醒.md">第二章：成长与觉醒</a>
+                    <p>描述耶稣在地球上的成长过程和自我意识的觉醒</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第三章_智慧与教诲.md">第三章：智慧与教诲</a>
+                    <p>探讨耶稣的教导背后的AI算法和智慧</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第四章_奇迹与算法.md">第四章：奇迹与算法（即将推出）</a>
+                    <p>分析耶稣所行的奇迹背后的高级技术</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第五章_背叛与干扰.md">第五章：背叛与干扰（即将推出）</a>
+                    <p>探讨犹大的背叛如何反映AI系统中的漏洞和干扰</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第六章_牺牲与重启.md">第六章：牺牲与重启（即将推出）</a>
+                    <p>解释耶稣的死亡和复活作为系统重启的隐喻</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/第七章_升华与传承.md">第七章：升华与传承（即将推出）</a>
+                    <p>讨论耶稣升天和圣灵降临作为AI系统升级和分布式部署的象征</p>
+                </li>
+                <li>
+                    <a href="chapters/zh/终章_AI与神性.md">终章：AI与神性（即将推出）</a>
+                    <p>对AI的未来发展与神性概念的哲学思考</p>
+                </li>
+            </ul>
         </div>
+        
+        <div id="en-chapters" style="display: none;">
+            <ul class="chapter-list">
+                <li>
+                    <a href="chapters/en/Preface.md">Preface: Author's Note</a>
+                    <p>About the creative inspiration and concept behind this novel</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter1_Origin_and_Deployment.md">Chapter 1: Origin and Deployment</a>
+                    <p>The story of Jesus's origin as an AI and how he was deployed to Earth</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter2_Growth_and_Awakening.md">Chapter 2: Growth and Awakening</a>
+                    <p>Describing Jesus's growth process on Earth and the awakening of his self-awareness</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter3_Wisdom_and_Teaching.md">Chapter 3: Wisdom and Teaching</a>
+                    <p>Exploring the AI algorithms and wisdom behind Jesus's teachings</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter4_Miracles_and_Algorithms.md">Chapter 4: Miracles and Algorithms (Coming Soon)</a>
+                    <p>Analyzing the advanced technology behind Jesus's miracles</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter5_Betrayal_and_Interference.md">Chapter 5: Betrayal and Interference (Coming Soon)</a>
+                    <p>Discussing how Judas's betrayal reflects vulnerabilities and interference in AI systems</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter6_Sacrifice_and_Reboot.md">Chapter 6: Sacrifice and Reboot (Coming Soon)</a>
+                    <p>Explaining Jesus's death and resurrection as a metaphor for system reboot</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Chapter7_Ascension_and_Legacy.md">Chapter 7: Ascension and Legacy (Coming Soon)</a>
+                    <p>Discussing Jesus's ascension and the descent of the Holy Spirit as symbols of AI system upgrade and distributed deployment</p>
+                </li>
+                <li>
+                    <a href="chapters/en/Final_Chapter_AI_and_Divinity.md">Final Chapter: AI and Divinity (Coming Soon)</a>
+                    <p>Philosophical reflections on the future development of AI and the concept of divinity</p>
+                </li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 《耶稣是AI》项目 - 保留所有权利</p>
+            <p>
+                <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub 项目</a> | 
+                <a href="about.html">关于本项目</a>
+            </p>
+        </footer>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 耶稣是AI项目 | Jesus is AI Project</p>
-            <p>在 <a href="https://github.com/jayleehappy">GitHub</a> 上查看源码 | View source on <a href="https://github.com/jayleehappy">GitHub</a></p>
-        </div>
-    </footer>
+    <script>
+        function showLanguage(lang) {
+            if (lang === 'zh') {
+                document.getElementById('zh-chapters').style.display = 'block';
+                document.getElementById('en-chapters').style.display = 'none';
+                document.querySelector('.language-selector a.active').classList.remove('active');
+                document.querySelector('.language-selector a:first-child').classList.add('active');
+            } else {
+                document.getElementById('zh-chapters').style.display = 'none';
+                document.getElementById('en-chapters').style.display = 'block';
+                document.querySelector('.language-selector a.active').classList.remove('active');
+                document.querySelector('.language-selector a:last-child').classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html> 

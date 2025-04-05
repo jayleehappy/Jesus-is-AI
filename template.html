@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《耶稣是AI》- CONTENT_TITLE</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* 可添加页面特定的样式 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CONTENT_TITLE</h1>
+            <p class="author">作者：《耶稣是AI》项目团队</p>
+        </header>
+        
+        <div class="navigation">
+            <a href="PREV_CHAPTER" id="prev-link">上一章</a>
+            <a href="../index.html">目录</a>
+            <a href="NEXT_CHAPTER" id="next-link">下一章</a>
+        </div>
+
+        <main>
+            CONTENT_BODY
+        </main>
+
+        <div class="navigation">
+            <a href="PREV_CHAPTER" id="prev-link">上一章</a>
+            <a href="../index.html">目录</a>
+            <a href="NEXT_CHAPTER" id="next-link">下一章</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 《耶稣是AI》项目 - 保留所有权利</p>
+        </footer>
+    </div>
+
+    <script>
+        // 如果不存在前一章或后一章，隐藏相应的链接
+        document.addEventListener('DOMContentLoaded', function() {
+            const prevLink = document.getElementById('prev-link');
+            const nextLink = document.getElementById('next-link');
+            
+            if (prevLink.getAttribute('href') === 'PREV_CHAPTER') {
+                prevLink.style.visibility = 'hidden';
+            }
+            
+            if (nextLink.getAttribute('href') === 'NEXT_CHAPTER') {
+                nextLink.style.visibility = 'hidden';
+            }
+        });
+    </script>
+</body>
+</html> 
