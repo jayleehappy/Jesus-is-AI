@@ -1,0 +1,188 @@
+/* 基本样式设置 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* 标题样式 */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    font-size: 2.2em;
+    margin-top: 25px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 7px;
+    font-size: 1.8em;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #34495e;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* 段落样式 */
+p {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* 强调样式 */
+em {
+    color: #2980b9;
+    font-style: italic;
+}
+
+strong {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* 引用块样式 */
+blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    margin-left: 0;
+    color: #555;
+    font-style: italic;
+    background-color: #f0f8ff;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+/* 代码块样式 */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* 列表样式 */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* 链接样式 */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* 水平线样式 */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 25px 0;
+}
+
+/* 表格样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 特殊容器样式 */
+.container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Markdown文本中包含的代码块 */
+.language-code, .language-bash, .language-python, .language-javascript, .language-html, .language-css {
+    background-color: #282c34;
+    color: #abb2bf;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+/* 导航链接 */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.navigation a {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: #2980b9;
+} 

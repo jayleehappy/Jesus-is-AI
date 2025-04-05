@@ -11,8 +11,9 @@ npm-debug.log
 yarn-error.log
 yarn.lock
 
-# 生成的HTML文件
+# 生成的HTML文件（但保留docs目录）
 html/
+# docs/
 
 # 操作系统相关
 .DS_Store
