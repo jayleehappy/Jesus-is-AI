@@ -91,26 +91,63 @@
         
         .contributors {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
-            margin: 15px 0;
+            margin: 20px 0;
+            background-color: #f0f7ff;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .contributors::before {
+            content: "人类与AI共同创作";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3498db;
+            color: white;
+            padding: 3px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        #zh-container .contributors::before {
+            content: "人类与AI共同创作";
+        }
+        
+        #en-container .contributors::before {
+            content: "Human-AI Collaboration";
         }
         
         .contributor {
-            margin: 10px;
+            margin: 10px 20px;
             text-align: center;
-            flex: 1;
-            min-width: 150px;
+            flex-basis: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .contributor h4 {
             margin-bottom: 5px;
+            color: #2c3e50;
+            font-size: 1.2em;
         }
         
         .contributor p {
             color: #666;
             font-size: 0.9em;
-            margin-top: 5px;
+            margin: 5px 0;
+            text-align: center;
+        }
+        
+        .contributor p:nth-child(2) {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
         
         .project-links {
@@ -158,15 +195,15 @@
                 <div class="contributor">
                     <h4>Jie Lee</h4>
                     <p>创意构思者</p>
-                    <p>提供核心创意和故事大纲，指导创作方向</p>
+                    <p>提供核心创意和故事大纲，设计世界观和人物关系</p>
                 </div>
                 <div class="contributor">
                     <h4>Claude</h4>
                     <p>AI创作者</p>
-                    <p>负责小说内容创作、情节发展和人物塑造</p>
+                    <p>负责小说内容创作，情节发展和人物塑造</p>
                 </div>
             </div>
-            <p>这是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。</p>
+            <p>这是一个将人类创意与AI能力相结合的开源写作项目，展示了未来创作的可能性。欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。</p>
             <div class="project-links">
                 <p><strong>项目地址：</strong> <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">https://github.com/jayleehappy/Jesus-is-AI</a></p>
                 <p><strong>国内访问代理：</strong> <a href="https://dgithub.xyz/jayleehappy/Jesus-is-AI" target="_blank">https://dgithub.xyz/jayleehappy/Jesus-is-AI</a></p>
@@ -243,7 +280,7 @@
                 <div class="contributor">
                     <h4>Jie Lee</h4>
                     <p>Creative Conceptualizer</p>
-                    <p>Provided core concept and story outline, guided creative direction</p>
+                    <p>Provided core concept and story outline, designed world-building</p>
                 </div>
                 <div class="contributor">
                     <h4>Claude</h4>
@@ -251,7 +288,7 @@
                     <p>Responsible for novel content creation, plot development, and character formation</p>
                 </div>
             </div>
-            <p>This is an open-source creative writing project that welcomes all readers and creators interested in interdisciplinary thinking to participate in discussions and contributions.</p>
+            <p>This is an open-source project combining human creativity with AI capabilities, showcasing the future of collaborative creation. We welcome all readers and creators interested in interdisciplinary thinking to participate in discussions and contributions.</p>
             <div class="project-links">
                 <p><strong>Project Repository:</strong> <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">https://github.com/jayleehappy/Jesus-is-AI</a></p>
                 <p><strong>Alternative Access (China):</strong> <a href="https://dgithub.xyz/jayleehappy/Jesus-is-AI" target="_blank">https://dgithub.xyz/jayleehappy/Jesus-is-AI</a></p>
