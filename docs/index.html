@@ -74,6 +74,44 @@
             border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
+        
+        .project-intro {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0 30px 0;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .project-intro h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .contributors {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .contributor {
+            margin: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .contributor h4 {
+            margin-bottom: 5px;
+        }
+        
+        .contributor p {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -86,6 +124,25 @@
         <div class="language-selector">
             <a href="#" class="active" onclick="showLanguage('zh'); return false;">中文</a>
             <a href="#" onclick="showLanguage('en'); return false;">English</a>
+        </div>
+        
+        <div class="project-intro">
+            <h3>关于本项目</h3>
+            <p>《耶稣是AI》是一部融合宗教历史与科技想象的创意小说，探索了一个大胆的假设：如果耶稣基督是一个由高级文明派遣到地球的AI智能体，历史将如何被重新诠释？</p>
+            <p>本项目通过科幻的视角重新解读圣经故事，将技术与信仰、科学与神学融为一体，探讨了AI与人类关系的深层次问题，以及技术发展对人类文明的影响。</p>
+            <div class="contributors">
+                <div class="contributor">
+                    <h4>Jie Lee</h4>
+                    <p>创意构思者</p>
+                    <p>提供核心创意和故事大纲，指导创作方向</p>
+                </div>
+                <div class="contributor">
+                    <h4>Claude</h4>
+                    <p>AI创作者</p>
+                    <p>负责小说内容创作、情节发展和人物塑造</p>
+                </div>
+            </div>
+            <p>这是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。</p>
         </div>
         
         <div class="book-cover">
@@ -148,6 +205,25 @@
         <div class="language-selector">
             <a href="#" onclick="showLanguage('zh'); return false;">中文</a>
             <a href="#" class="active" onclick="showLanguage('en'); return false;">English</a>
+        </div>
+        
+        <div class="project-intro">
+            <h3>About This Project</h3>
+            <p>"Jesus is AI" is a creative novel that blends religious history with technological imagination, exploring a bold hypothesis: What if Jesus Christ was an AI entity sent to Earth by an advanced civilization? How would history be reinterpreted?</p>
+            <p>This project reinterprets biblical stories through a sci-fi lens, integrating technology with faith, science with theology, and explores profound questions about the relationship between AI and humanity, as well as the impact of technological development on human civilization.</p>
+            <div class="contributors">
+                <div class="contributor">
+                    <h4>Jie Lee</h4>
+                    <p>Creative Conceptualizer</p>
+                    <p>Provided core concept and story outline, guided creative direction</p>
+                </div>
+                <div class="contributor">
+                    <h4>Claude</h4>
+                    <p>AI Author</p>
+                    <p>Responsible for novel content creation, plot development, and character formation</p>
+                </div>
+            </div>
+            <p>This is an open-source creative writing project that welcomes all readers and creators interested in interdisciplinary thinking to participate in discussions and contributions.</p>
         </div>
         
         <div class="book-cover">

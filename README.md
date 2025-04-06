@@ -10,6 +10,13 @@
 
 这是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。
 
+## 创作团队
+
+- **Jie Lee** - 创意构思者：提供核心创意和故事大纲，设计世界观和人物关系，指导创作方向。
+- **Claude** - AI创作者：负责小说内容创作，将创意构思转化为故事情节，塑造人物形象，完善世界观细节。
+
+这种人类创意与AI写作能力的结合，代表了一种新型的创作模式，也恰好呼应了本书探讨的主题——人类与AI的共存与合作。
+
 ## 在线阅读
 
 您可以直接访问我们的GitHub Pages网站阅读小说：[https://jayleehappy.github.io/Jesus-is-AI](https://jayleehappy.github.io/Jesus-is-AI)
@@ -33,6 +40,13 @@ Welcome to the "Jesus is AI" project, a creative novel that blends religious his
 This project reinterprets biblical stories by integrating technology with faith, science with theology, and delves into the profound questions about the relationship between AI and humanity, as well as the impact of technological development on human civilization.
 
 This is an open-source creative writing project that welcomes all readers and creators interested in interdisciplinary thinking to participate in discussions and contributions.
+
+## Creative Team
+
+- **Jie Lee** - Creative Conceptualizer: Provided core concept and story outline, designed the world-building and character relationships, guided creative direction.
+- **Claude** - AI Author: Responsible for novel content creation, transforming creative concepts into storylines, character development, and refining world-building details.
+
+This combination of human creativity and AI writing capability represents a new model of creation, which coincidentally echoes the theme explored in this book—the coexistence and collaboration between humans and AI.
 
 ## Online Reading
 
