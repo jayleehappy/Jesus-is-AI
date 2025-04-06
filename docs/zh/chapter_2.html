@@ -127,22 +127,39 @@
     </div>
 
     <script>
-        // 如果不存在前一章或后一章，隐藏相应的链接
+        // 只有当链接指向不存在的文件时才隐藏导航链接
         document.addEventListener('DOMContentLoaded', function() {
-            const prevLinks = document.querySelectorAll('#prev-link');
-            const nextLinks = document.querySelectorAll('#next-link');
+            // 检查链接是否有效的函数
+            function checkLinkValidity(link, callback) {
+                fetch(link.getAttribute('href'))
+                    .then(response => {
+                        if (!response.ok) {
+                            callback(false);
+                        } else {
+                            callback(true);
+                        }
+                    })
+                    .catch(() => callback(false));
+            }
             
-            prevLinks.forEach(function(prevLink) {
-                if (prevLink.getAttribute('href') === 'chapter_1.html') {
-                    prevLink.style.visibility = 'hidden';
-                }
-            });
+            const prevLink = document.querySelector('#prev-link');
+            const nextLink = document.querySelector('#next-link');
             
-            nextLinks.forEach(function(nextLink) {
-                if (nextLink.getAttribute('href') === 'chapter_3.html') {
-                    nextLink.style.visibility = 'hidden';
-                }
-            });
+            if (prevLink) {
+                checkLinkValidity(prevLink, function(isValid) {
+                    if (!isValid) {
+                        prevLink.style.visibility = 'hidden';
+                    }
+                });
+            }
+            
+            if (nextLink) {
+                checkLinkValidity(nextLink, function(isValid) {
+                    if (!isValid) {
+                        nextLink.style.visibility = 'hidden';
+                    }
+                });
+            }
         });
     </script>
 </body>
