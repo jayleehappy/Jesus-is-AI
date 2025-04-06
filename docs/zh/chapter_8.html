@@ -19,7 +19,7 @@
         <div class="navigation">
             <a href="chapter_7.html" id="prev-link">上一章</a>
             <a href="../index.html">目录</a>
-            <a href="NEXT_CHAPTER" id="next-link">下一章</a>
+            <a href="#" id="next-link">下一章</a>
         </div>
 
         <main>
@@ -187,7 +187,7 @@ Asat—人类文明交流计划现已启动。
         <div class="navigation">
             <a href="chapter_7.html" id="prev-link">上一章</a>
             <a href="../index.html">目录</a>
-            <a href="NEXT_CHAPTER" id="next-link">下一章</a>
+            <a href="#" id="next-link">下一章</a>
         </div>
 
         <footer>
@@ -208,9 +208,7 @@ Asat—人类文明交流计划现已启动。
             });
             
             nextLinks.forEach(function(nextLink) {
-                if (nextLink.getAttribute('href') === 'NEXT_CHAPTER') {
-                    nextLink.style.visibility = 'hidden';
-                }
+                nextLink.style.visibility = 'hidden';
             });
         });
     </script>

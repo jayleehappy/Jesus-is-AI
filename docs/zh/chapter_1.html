@@ -190,13 +190,13 @@
             const nextLinks = document.querySelectorAll('#next-link');
             
             prevLinks.forEach(function(prevLink) {
-                if (prevLink.getAttribute('href') === 'chapter_0.html') {
+                if (prevLink.getAttribute('href') === 'PREV_CHAPTER') {
                     prevLink.style.visibility = 'hidden';
                 }
             });
             
             nextLinks.forEach(function(nextLink) {
-                if (nextLink.getAttribute('href') === 'chapter_2.html') {
+                if (nextLink.getAttribute('href') === 'NEXT_CHAPTER') {
                     nextLink.style.visibility = 'hidden';
                 }
             });
