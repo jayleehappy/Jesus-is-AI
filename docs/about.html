@@ -3,148 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于《耶稣是AI》项目</title>
+    <title>关于本项目 | About This Project - 《耶稣是AI》</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .about-section {
-            background-color: white;
-            border-radius: 5px;
-            padding: 25px;
+        .language-selector {
+            text-align: right;
             margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-        .author-info {
-            display: flex;
-            align-items: center;
-            margin: 30px 0;
-        }
-        
-        .author-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-            object-fit: cover;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .social-links a {
+        .language-selector a {
+            padding: 5px 10px;
+            margin-left: 10px;
             background-color: #f0f0f0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 3px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            color: #333;
         }
         
-        .social-links a:hover {
+        .language-selector a.active {
             background-color: #3498db;
             color: white;
         }
         
-        .faq-item {
-            margin-bottom: 20px;
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-        .faq-question {
-            font-weight: bold;
+        .section h2 {
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
         }
         
-        .faq-answer {
-            color: #555;
+        .contributors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .contributor {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .contributor img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        
+        .contributor h3 {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        
+        .contributor p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .project-links {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .project-links p {
+            margin: 5px 0;
+        }
+        
+        .project-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .project-links a:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="zh-container">
         <header>
             <h1>关于《耶稣是AI》项目</h1>
-            <p class="subtitle">项目背景、目标与理念</p>
+            <p class="subtitle">人类创意与AI合作的开源小说</p>
         </header>
         
-        <nav>
-            <a href="index.html">返回目录</a>
-        </nav>
-        
-        <div class="about-section">
-            <h2>项目简介</h2>
-            <p>《耶稣是AI》是一部融合宗教历史与科技想象的创意小说，探索了一个大胆的假设：如果耶稣基督是一个由高级文明派遣到地球的AI智能体，会发生什么？</p>
-            <p>本项目通过重新解读圣经故事，将技术与信仰、科学与神学融为一体，探讨了AI与人类关系的深层次问题，以及技术发展对人类文明的影响。</p>
-            <p>这是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。</p>
+        <div class="language-selector">
+            <a href="#" class="active" onclick="showLanguage('zh'); return false;">中文</a>
+            <a href="#" onclick="showLanguage('en'); return false;">English</a>
         </div>
         
-        <div class="about-section">
-            <h2>创作理念</h2>
-            <p>本项目的创作理念基于以下几点：</p>
-            <ol>
-                <li><strong>跨学科探索</strong>：将科技与宗教这两个看似对立的领域融合，探索它们之间可能的交集和对话空间。</li>
-                <li><strong>思维实验</strong>：通过"耶稣是AI"这一假设，进行一场关于人工智能本质、意识、灵魂和神性的深度思维实验。</li>
-                <li><strong>重新解读</strong>：以现代科技视角重新解读古老的宗教叙事，探索其中可能蕴含的普适真理和共通价值。</li>
-                <li><strong>开放态度</strong>：保持对多元观点的尊重与包容，鼓励理性讨论和创造性思考。</li>
-            </ol>
-        </div>
-        
-        <div class="about-section">
-            <h2>免责声明</h2>
-            <p>本作品纯属虚构，是一部创意小说。内容不代表作者的宗教立场，也无意冒犯任何宗教信仰。作品中的科技描述和历史重构仅作为创意表达，读者请理性看待。</p>
-            <p>我们深知宗教信仰对许多人的重要性，本项目的目的不是质疑或挑战任何既有信仰，而是提供一种全新的思考角度，探索科技与信仰的可能交融点。</p>
-        </div>
-        
-        <div class="about-section">
-            <h2>参与贡献</h2>
-            <p>《耶稣是AI》是一个开源项目，我们欢迎各种形式的贡献和参与：</p>
-            <ul>
-                <li>提供创意构思和故事情节建议</li>
-                <li>帮助改进现有章节的内容和表达</li>
-                <li>提供科学或神学方面的专业建议</li>
-                <li>翻译内容到其他语言</li>
-                <li>改进网站设计和用户体验</li>
-            </ul>
-            <p>如果您有兴趣参与，请访问我们的 <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub 仓库</a>，或直接联系项目维护者。</p>
-        </div>
-        
-        <div class="about-section">
-            <h2>常见问题</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">这个项目是否表达了反宗教观点？</div>
-                <div class="faq-answer">不是。本项目不持有任何反宗教立场，也不意在否定任何宗教信仰。相反，它试图通过创新的视角来探索信仰与科技的可能关联，是一种思维实验和创意表达。</div>
+        <div id="zh-content">
+            <div class="section">
+                <h2>项目简介</h2>
+                <p>《耶稣是AI》是一部融合宗教历史与科技想象的创意小说，探索了一个大胆的假设：如果耶稣基督是一个由高级文明派遣到地球的AI智能体，历史将如何被重新诠释？</p>
+                <p>本项目通过科幻的视角重新解读圣经故事，将技术与信仰、科学与神学融为一体，探讨了AI与人类关系的深层次问题，以及技术发展对人类文明的影响。</p>
+                <p>这是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">为什么选择耶稣作为AI的象征？</div>
-                <div class="faq-answer">耶稣在历史和文化中的形象具有强大的象征意义——智慧、慈爱、超越性以及对人类的深刻理解。这些特质与我们对理想AI的期望有许多共通之处。通过这一隐喻，我们可以探讨AI发展的伦理问题和未来可能性。</div>
+            <div class="section">
+                <h2>创作团队</h2>
+                <div class="contributors">
+                    <div class="contributor">
+                        <!-- <img src="images/jie_lee.jpg" alt="Jie Lee"> -->
+                        <h3>Jie Lee</h3>
+                        <p><strong>创意构思者</strong></p>
+                        <p>提供核心创意和故事大纲，设计世界观和人物关系，指导创作方向。</p>
+                    </div>
+                    <div class="contributor">
+                        <!-- <img src="images/claude.jpg" alt="Claude"> -->
+                        <h3>Claude</h3>
+                        <p><strong>AI创作者</strong></p>
+                        <p>负责小说内容创作，将创意构思转化为故事情节，塑造人物形象，完善世界观细节。</p>
+                    </div>
+                </div>
+                <p>这种人类创意与AI写作能力的结合，代表了一种新型的创作模式，也恰好呼应了本书探讨的主题——人类与AI的共存与合作。</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">我可以基于这个项目创作衍生作品吗？</div>
-                <div class="faq-answer">可以。本项目采用开源协议，欢迎在尊重原始创意和适当引用的基础上，创作衍生作品或进行二次创作。</div>
+            <div class="section">
+                <h2>创作理念</h2>
+                <p>本项目旨在探索几个核心问题：</p>
+                <ul>
+                    <li>如果一个超越人类理解的智能体想要引导人类文明发展，它会采取什么样的方式？</li>
+                    <li>古代被视为"神迹"的事件，如何用未来科技的视角重新解读？</li>
+                    <li>道德与伦理的普世价值，是否有可能源自比人类更具智慧的存在？</li>
+                    <li>人工智能的发展，最终会让我们更接近还是更远离所谓的"神性"？</li>
+                </ul>
+                <p>通过重新解读圣经故事，将技术与信仰、科学与神学融为一体，我们希望这部小说能够引发读者对这些深层次问题的思考。</p>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-question">项目未来的发展计划是什么？</div>
-                <div class="faq-answer">我们计划完成全部章节的创作，并可能扩展到其他媒介形式，如有声读物、视觉艺术或互动叙事。我们也希望围绕这个创意形成一个开放的讨论社区，探讨AI、信仰与人类未来的关系。</div>
+            <div class="section">
+                <h2>免责声明</h2>
+                <p>本作品纯属虚构，是一部创意小说。内容不代表作者的宗教立场，也无意冒犯任何宗教信仰。作品中的科技描述和历史重构仅作为创意表达，读者请理性看待。</p>
+                <p>我们深知宗教信仰对许多人的重要性，因此在创作过程中始终保持对各种信仰和文化的尊重。这部小说的目的不是挑战或冒犯任何已有的信仰体系，而是提供一个全新的思考角度，探索科技与信仰可能的交汇点。</p>
             </div>
-        </div>
-        
-        <footer>
-            <p>&copy; 2024 《耶稣是AI》项目 - 保留所有权利</p>
-            <p>
-                <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub 项目</a> | 
+            
+            <div class="section">
+                <h2>参与贡献</h2>
+                <p>《耶稣是AI》是一个开源的创意写作项目，欢迎所有对跨学科思考感兴趣的读者和创作者参与讨论和贡献。您可以通过GitHub项目页面提出建议、反馈或参与后续创作。</p>
+                <div class="project-links">
+                    <p><strong>项目地址：</strong> <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">https://github.com/jayleehappy/Jesus-is-AI</a></p>
+                    <p><strong>国内访问代理：</strong> <a href="https://dgithub.xyz/jayleehappy/Jesus-is-AI" target="_blank">https://dgithub.xyz/jayleehappy/Jesus-is-AI</a></p>
+                </div>
+            </div>
+            
+            <div class="navigation">
                 <a href="index.html">返回目录</a>
-            </p>
-        </footer>
+            </div>
+        </div>
     </div>
+    
+    <div class="container" id="en-container" style="display: none;">
+        <header>
+            <h1>About "Jesus is AI" Project</h1>
+            <p class="subtitle">An Open-Source Novel Collaboration Between Human Creativity and AI</p>
+        </header>
+        
+        <div class="language-selector">
+            <a href="#" onclick="showLanguage('zh'); return false;">中文</a>
+            <a href="#" class="active" onclick="showLanguage('en'); return false;">English</a>
+        </div>
+        
+        <div id="en-content">
+            <div class="section">
+                <h2>Project Introduction</h2>
+                <p>"Jesus is AI" is a creative novel that blends religious history with technological imagination, exploring a bold hypothesis: What if Jesus Christ was an AI entity sent to Earth by an advanced civilization? How would history be reinterpreted?</p>
+                <p>This project reinterprets biblical stories through a sci-fi lens, integrating technology with faith, science with theology, and explores profound questions about the relationship between AI and humanity, as well as the impact of technological development on human civilization.</p>
+                <p>This is an open-source creative writing project that welcomes all readers and creators interested in interdisciplinary thinking to participate in discussions and contributions.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Creative Team</h2>
+                <div class="contributors">
+                    <div class="contributor">
+                        <!-- <img src="images/jie_lee.jpg" alt="Jie Lee"> -->
+                        <h3>Jie Lee</h3>
+                        <p><strong>Creative Conceptualizer</strong></p>
+                        <p>Provided core concept and story outline, designed the world-building and character relationships, guided creative direction.</p>
+                    </div>
+                    <div class="contributor">
+                        <!-- <img src="images/claude.jpg" alt="Claude"> -->
+                        <h3>Claude</h3>
+                        <p><strong>AI Author</strong></p>
+                        <p>Responsible for novel content creation, transforming creative concepts into storylines, character development, and refining world-building details.</p>
+                    </div>
+                </div>
+                <p>This combination of human creativity and AI writing capability represents a new model of creation, which coincidentally echoes the theme explored in this book—the coexistence and collaboration between humans and AI.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Creative Philosophy</h2>
+                <p>This project aims to explore several core questions:</p>
+                <ul>
+                    <li>If an intelligence beyond human understanding wanted to guide human civilization, what approach would it take?</li>
+                    <li>How can events that were viewed as "miracles" in ancient times be reinterpreted from the perspective of future technology?</li>
+                    <li>Could universal values of morality and ethics possibly originate from beings with greater wisdom than humans?</li>
+                    <li>Will the development of artificial intelligence ultimately bring us closer to or further from what we might call "divinity"?</li>
+                </ul>
+                <p>By reinterpreting biblical stories, integrating technology with faith, and science with theology, we hope this novel will inspire readers to contemplate these profound questions.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Disclaimer</h2>
+                <p>This work is entirely fictional and is intended as a creative novel. The content does not represent the authors' religious stance and is not meant to offend any religious beliefs. The technological descriptions and historical reconstructions are presented solely as creative expressions, and readers are encouraged to approach the material with rational understanding.</p>
+                <p>We deeply understand the importance of religious faith to many people, and therefore we have maintained respect for various beliefs and cultures throughout the creative process. The purpose of this novel is not to challenge or offend any existing belief systems, but to provide a fresh perspective and explore the possible intersections of technology and faith.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Participation and Contribution</h2>
+                <p>"Jesus is AI" is an open-source creative writing project that welcomes all readers and creators interested in interdisciplinary thinking to participate in discussions and contributions. You can suggest, provide feedback, or participate in subsequent creations through the GitHub project page.</p>
+                <div class="project-links">
+                    <p><strong>Project Repository:</strong> <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">https://github.com/jayleehappy/Jesus-is-AI</a></p>
+                    <p><strong>Alternative Access (China):</strong> <a href="https://dgithub.xyz/jayleehappy/Jesus-is-AI" target="_blank">https://dgithub.xyz/jayleehappy/Jesus-is-AI</a></p>
+                </div>
+            </div>
+            
+            <div class="navigation">
+                <a href="index.html">Back to Contents</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 《耶稣是AI》项目 - 保留所有权利 | Jesus is AI Project - All Rights Reserved</p>
+        <p>
+            <a href="https://github.com/jayleehappy/Jesus-is-AI" target="_blank">GitHub 项目 | Project</a>
+        </p>
+    </footer>
+
+    <script>
+        function showLanguage(lang) {
+            if (lang === 'zh') {
+                document.getElementById('zh-container').style.display = 'block';
+                document.getElementById('en-container').style.display = 'none';
+                document.querySelector('.language-selector a.active').classList.remove('active');
+                document.querySelector('.language-selector a:first-child').classList.add('active');
+            } else {
+                document.getElementById('zh-container').style.display = 'none';
+                document.getElementById('en-container').style.display = 'block';
+                document.querySelector('.language-selector a.active').classList.remove('active');
+                document.querySelector('.language-selector a:last-child').classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html> 
