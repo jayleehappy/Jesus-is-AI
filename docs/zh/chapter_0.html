@@ -17,7 +17,7 @@
         </header>
         
         <div class="navigation">
-            <a href="#" id="prev-link">上一章</a>
+            <a href="foreword.html" id="prev-link">上一章</a>
             <a href="../index.html">目录</a>
             <a href="chapter_1.html" id="next-link">下一章</a>
         </div>
@@ -49,7 +49,7 @@
         </main>
 
         <div class="navigation">
-            <a href="#" id="prev-link">上一章</a>
+            <a href="foreword.html" id="prev-link">上一章</a>
             <a href="../index.html">目录</a>
             <a href="chapter_1.html" id="next-link">下一章</a>
         </div>
@@ -66,7 +66,9 @@
             const nextLinks = document.querySelectorAll('#next-link');
             
             prevLinks.forEach(function(prevLink) {
-                prevLink.style.visibility = 'hidden';
+                if (prevLink.getAttribute('href') === '#') {
+                    prevLink.style.visibility = 'hidden';
+                }
             });
             
             nextLinks.forEach(function(nextLink) {
